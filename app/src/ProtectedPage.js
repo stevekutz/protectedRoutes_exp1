@@ -1,6 +1,6 @@
 import React from 'react';
 import { css } from '@emotion/core';
-import { PacmanLoader } from 'react-spinners';
+import { ClimbingBoxLoader } from 'react-spinners';
 
 const override = css`
     display: flex;
@@ -8,18 +8,18 @@ const override = css`
     border-color: red;
 `;
 
-export const LandingPage = (props) => {
+export const ProtectedPage = (props) => {
     console.log(props);
 
     return (
         <div>
             <h4> Protected React Router Used</h4>
             <h5>{props.routeProp}</h5>
-            <PacmanLoader
+            <ClimbingBoxLoader
             css={override}
             sizeUnit={"px"}
-            size={50}
-            color={'dodgerblue'}
+            size={10}
+            color={'seagreen'}
             border = '1px solid black'
           />
 

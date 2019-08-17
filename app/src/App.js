@@ -3,9 +3,10 @@ import React from 'react';
 import {Route, Switch} from 'react-router-dom';
 
 import {LandingPage} from './LandingPage';
+import {ProtectedPage} from './ProtectedPage';
 
 import { css } from '@emotion/core';
-import { PacmanLoader } from 'react-spinners';
+import { RingLoader } from 'react-spinners';
 
 import './App.css';
 
@@ -20,20 +21,24 @@ function App() {
   return (
     <div className="App">
       <h3> Protected Routes</h3>
-      
+      <RingLoader
+      css={override}
+      sizeUnit={"px"}
+      size={50}
+      color={'deeppink'}
+      border = '1px solid black'
+    />
+
+
       <Route 
         exact path = '/'
-        render = { () => <LandingPage routeProp = {"some route prop info passed in"} />   } 
+        render = { () => <LandingPage routeProp = {"render prop passed into LandingPage"} />   } 
+      />
+      <Route 
+      exact path = '/protected'
+      render = { () => <ProtectedPage routeProp = {"render prop passed into ProtectedPage"} />   } 
       />
 
-
-      <PacmanLoader
-        css={override}
-        sizeUnit={"px"}
-        size={50}
-        color={'dodgerblue'}
-        border = '1px solid black'
-      />
     </div>
   );
 }
