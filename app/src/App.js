@@ -1,6 +1,7 @@
 import React from 'react';
 // import logo from './logo.svg';
 import {Route, Switch} from 'react-router-dom';
+import {Button, Container} from 'semantic-ui-react';
 
 import {LandingPage} from './LandingPage';
 import {ProtectedPage} from './ProtectedPage';
@@ -19,8 +20,8 @@ const override = css`
 
 function App() {
   return (
-    <div className="App">
-      <h3> Protected Routes</h3>
+    <Container fluid style = {{margin: `20px`, padding: `10px`, border: `3px solid seagreen`}}>
+      <h3> Protected Routes - App component</h3>
       <RingLoader
       css={override}
       sizeUnit={"px"}
@@ -39,12 +40,12 @@ function App() {
     render = { (props) => <ProtectedPage {...props } routeProp = {"render prop passed into ProtectedPage"} />   } 
     />
 
-    </div>
+    </Container>
   );
 }
 
 /*
-      
+
       <Route 
         exact path = '/'
         component = {LandingPage} 

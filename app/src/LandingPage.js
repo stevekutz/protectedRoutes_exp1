@@ -7,6 +7,9 @@ import auth from './auth'; // lower-case >>> we are expect instance of auth obj
         // auth.login called with a callback when login successful & will 
         // redirect user to the protected route
 
+
+
+
 const override = css`
     display: flex;
     margin: 20px auto;
@@ -17,7 +20,7 @@ export const LandingPage = (props) => {
     console.log(props);
 
     return (
-        <Container fluid>
+        <Container fluid style = {{margin: `20px`, padding: `10px`, border: `1px solid dodgerblue`}}>
             <h4> Landing Page </h4>
           <h5>{props.routeProp}</h5>
         
@@ -28,7 +31,7 @@ export const LandingPage = (props) => {
                          props.history.push('/protected'); 
                     }); 
                 }}
-            
+             className = 'LandingPage'
                 > Login </Button>
             <PacmanLoader
                 css={override}

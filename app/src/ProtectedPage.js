@@ -1,6 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/core';
 import { ClimbingBoxLoader } from 'react-spinners';
+import {Button, Container} from 'semantic-ui-react';
 
 const override = css`
     display: flex;
@@ -12,7 +13,7 @@ export const ProtectedPage = (props) => {
     console.log(props);
 
     return (
-        <div>
+        <Container style = {{margin: `20px`, padding: `10px`, border: `1px solid deeppink`}}>
             <h4> Protected Page </h4>
             <h5>{props.routeProp}</h5>
             <ClimbingBoxLoader
@@ -23,7 +24,7 @@ export const ProtectedPage = (props) => {
             border = '1px solid black'
           />
 
-        </div>
+        </Container>
     )
 
 }
