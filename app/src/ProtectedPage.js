@@ -13,7 +13,7 @@ export const ProtectedPage = (props) => {
 
     return (
         <div>
-            <h4> Protected React Router Used</h4>
+            <h4> Protected Page </h4>
             <h5>{props.routeProp}</h5>
             <ClimbingBoxLoader
             css={override}

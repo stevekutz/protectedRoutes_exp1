@@ -30,17 +30,40 @@ function App() {
     />
 
 
-      <Route 
-        exact path = '/'
-        render = { () => <LandingPage routeProp = {"render prop passed into LandingPage"} />   } 
-      />
-      <Route 
-      exact path = '/protected'
-      render = { () => <ProtectedPage routeProp = {"render prop passed into ProtectedPage"} />   } 
-      />
+    <Route 
+    exact path = '/'
+    render = { (props) => <LandingPage {...props} routeProp = {"render prop passed into LandingPage"} />   } 
+    />
+    <Route 
+    exact path = '/protected'
+    render = { (props) => <ProtectedPage {...props } routeProp = {"render prop passed into ProtectedPage"} />   } 
+    />
 
     </div>
   );
 }
+
+/*
+      
+      <Route 
+        exact path = '/'
+        component = {LandingPage} 
+      />
+      <Route 
+      exact path = '/protectedApp'
+      component = {ProtectedPage}
+      />
+
+          <Route 
+        exact path = '/'
+        render = { () => <LandingPage routeProp = {"render prop passed into LandingPage"} />   } 
+      />
+
+
+      <Route 
+      exact path = '/protected'
+      render = { () => <ProtectedPage {...props } routeProp = {"render prop passed into ProtectedPage"} />   } 
+      />
+*/
 
 export default App;
