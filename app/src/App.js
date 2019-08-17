@@ -1,24 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
+import {Route, Switch} from 'react-router-dom';
+
+import {LandingPage} from './LandingPage';
+
+import { css } from '@emotion/core';
+import { PacmanLoader } from 'react-spinners';
+
 import './App.css';
+
+const override = css`
+    display: flex;
+    margin: 0 auto;
+    border-color: red;
+`;
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h3> Protected Routes</h3>
+      
+      <Route 
+        exact path = '/'
+        render = { () => <LandingPage routeProp = {"some route prop info passed in"} />   } 
+      />
+
+
+      <PacmanLoader
+        css={override}
+        sizeUnit={"px"}
+        size={50}
+        color={'dodgerblue'}
+        border = '1px solid black'
+      />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 module.exports = function (api) {
     api.cache(true);
   
-   // const presets = [ ... ];
+   // const presets = ["@babel/preset-react", "@babel/preset-env],;
     const plugins = ["emotion"];
   
     return {
@@ -9,4 +9,4 @@ module.exports = function (api) {
       plugins
     };
   }
-  
+  art

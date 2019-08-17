@@ -2,7 +2,7 @@
 
 1) Set up React app `yarn create react-app app`
 
-2) Add router dependencies  `yarn add react-router-dom`
+2) Add router dependencies  `yarn add react-router-dom` and wrap `<App/> in <BrowserRouter>`
 
 3) Add spinner dependencies
     - `yarn add @emotion/core react spinner @emotion/styled babel-plugin-emotion`
