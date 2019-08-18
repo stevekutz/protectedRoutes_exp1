@@ -23,14 +23,15 @@ const override = css`
 function App() {
   return (
     <Container fluid style = {{margin: `20px`, padding: `10px`, border: `3px solid seagreen`}}>
-      <h3> Protected Routes - App component</h3>
+      <h3>App component</h3>
       <RingLoader
       css={override}
       sizeUnit={"px"}
       size={50}
       color={'deeppink'}
       border = '1px solid black'
-    />
+      />
+
 
       <Switch>
         <Route 

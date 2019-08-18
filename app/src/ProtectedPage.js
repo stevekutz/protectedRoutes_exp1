@@ -16,6 +16,7 @@ export const ProtectedPage = (props) => {
     return (
         <Container style = {{margin: `20px`, padding: `10px`, border: `1px solid deeppink`}}>
             <h4> Protected Page </h4>
+            <p>     pathname: {props.match.url} </p>
             <h5>{props.routeProp}</h5>
             <ClimbingBoxLoader
             css={override}
@@ -30,6 +31,12 @@ export const ProtectedPage = (props) => {
             onClick = { () => { auth.logout( () =>  props.history.push('/') )}        
             }  > Logout  
          </Button>
+
+         <Button 
+         inverted color = 'purple'
+         onClick = { ()  =>  props.history.push('/badRoute') }        
+           > Goto Bad Route 
+      </Button>
         </Container>
     )
 

@@ -4,7 +4,8 @@ import {Button, Container, Icon} from 'semantic-ui-react';
 export const NotFound = (props) => {
     return (
         <Container style = {{ border: `1px solid olive`, margin: `20px`, padding: `10px`, backgroundColor: 'grey'}}>
-           <p> {props.notFoundProp} </p>  
+           <p> {props.notFoundProp} </p>
+           <p>    pathname: {props.match.url}</p>  
         
             <Button style = {{ border: '1px solid black', margin: `5px` }}
                 inverted color = 'olive'

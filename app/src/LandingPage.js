@@ -22,6 +22,7 @@ export const LandingPage = (props) => {
     return (
         <Container fluid style = {{margin: `20px`, padding: `10px`, border: `1px solid dodgerblue`}}>
             <h4> Landing Page </h4>
+            <p>    pathname: {props.match.url} </p>
           <h5>{props.routeProp}</h5>
         
               <Button 

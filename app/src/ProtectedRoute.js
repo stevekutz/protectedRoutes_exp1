@@ -3,7 +3,7 @@ import {Route, Redirect} from 'react-router-dom';
 // now we import auth to verify login status 
 import auth from './auth';
 
-// we will pass in Component as a DESCTRUCTURED prop, the remaining
+// we will pass in Component as a DESTRUCTURED prop, the remaining
 // as passed into  ...rest
 export const ProtectedRoute = ({component: Component, ...rest}) => {
     return (
@@ -12,7 +12,7 @@ export const ProtectedRoute = ({component: Component, ...rest}) => {
             render = { (props) => {
                 // verify authenticated before returning component
                 if( auth.isAuthenticated() ){
-                    return <Component {...props} />
+                    return <Component  {...props}/>
                 }
                 else {
                     return <Redirect to = {
