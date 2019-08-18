@@ -1,7 +1,7 @@
 import React from 'react';
 // import logo from './logo.svg';
 import {Route, Switch} from 'react-router-dom';
-import {Button, Container} from 'semantic-ui-react';
+import {Container} from 'semantic-ui-react';
 
 import {LandingPage} from './LandingPage';
 import {ProtectedPage} from './ProtectedPage';
@@ -45,7 +45,7 @@ function App() {
 
         <Route 
           path = '*' 
-          render = { (props) => <NotFound  {...props} />}
+          render = { (props) => <NotFound  {...props} notFoundProp = {"404 not found prop"} />}
         />
       </Switch>
 

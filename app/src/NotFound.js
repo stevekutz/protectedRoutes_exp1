@@ -1,15 +1,27 @@
 import React from 'react';
-import {Button, Container} from 'semantic-ui-react';
+import {Button, Container, Icon} from 'semantic-ui-react';
 
 export const NotFound = (props) => {
     return (
-        <Container style = {{margin: `20px`, padding: `10px`, border: `1px solid olive`}}>
-           <p> 404 not found </p>  
+        <Container style = {{ border: `1px solid olive`, margin: `20px`, padding: `10px`}}>
+           <p> {props.notFoundProp} </p>  
         
-            <Button 
+            <Button style = {{ border: '1px solid black', margin: `5px` }}
                 inverted color = 'olive'
                 onClick = { () => props.history.push('/') }        
-            >Back to Landing page</Button>
+            >
+            <Icon name='exclamation' />
+            Back to Landing page</Button>
+
+            <Button
+                inverted color = 'pink'
+                onClick = { () => props.history.push('/') } 
+            >
+                <Icon name = 'exclamation'/>
+                <Button.Content> another way to get back to Landing Page</Button.Content>
+                
+            </Button>
+
 
         </Container>
     )
