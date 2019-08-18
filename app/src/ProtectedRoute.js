@@ -6,6 +6,9 @@ import auth from './auth';
 // we will pass in Component as a DESTRUCTURED prop, the remaining
 // as passed into  ...rest
 export const ProtectedRoute = ({component: Component, ...rest}) => {
+    console.log('component ', Component);
+    console.log('rest', rest);
+    
     return (
         <Route 
             {...rest}  //RESTRUCTURED HERE

@@ -5,7 +5,7 @@ import {Container} from 'semantic-ui-react';
 import {LandingPage} from './LandingPage';
 import {ProtectedPage} from './ProtectedPage';
 import {ProtectedRoute} from './ProtectedRoute';
-import {NotFound} from './NotFound';
+import {NotFoundPage} from './NotFoundPage';
 
 import { css } from '@emotion/core';
 import { RingLoader } from 'react-spinners';
@@ -45,7 +45,7 @@ function App() {
 
         <Route 
           path = '*' 
-          render = { (props) => <NotFound  {...props} notFoundProp = {"404 not found prop"} />}
+          render = { (props) => <NotFoundPage  {...props} notFoundProp = {"404 not found prop"} />}
         />
       </Switch>
 

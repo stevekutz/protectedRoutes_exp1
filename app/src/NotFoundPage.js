@@ -1,7 +1,7 @@
 import React from 'react';
 import {Button, Container, Icon} from 'semantic-ui-react';
 
-export const NotFound = (props) => {
+export const NotFoundPage = (props) => {
     return (
         <Container style = {{ border: `1px solid olive`, margin: `20px`, padding: `10px`, backgroundColor: 'grey'}}>
            <p> {props.notFoundProp} </p>

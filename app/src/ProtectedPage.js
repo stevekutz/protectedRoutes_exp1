@@ -16,7 +16,8 @@ export const ProtectedPage = (props) => {
     return (
         <Container style = {{margin: `20px`, padding: `10px`, border: `1px solid deeppink`}}>
             <h4> Protected Page </h4>
-            <p>     pathname: {props.match.url} </p>
+            {/*  pathname: {props.match.path}  SAME effect */}
+            <p>     pathname: {props.match.url} </p>  
             <h5>{props.routeProp}</h5>
             <ClimbingBoxLoader
             css={override}
