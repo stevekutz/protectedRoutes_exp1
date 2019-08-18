@@ -1,8 +1,8 @@
 ## Experiments with Protected Routes
 An authenticated login is simulated to render a protected route from a landing page. Any undefined route is directed to NotFoundPage. A few spinners from 'react spinner' and some UI components from Semantic UI React are sprinkled in for fun. To help communicate routes, each component also describes current path along with page description.
-
-![](./app/src/content/ProtectedRoutes2.gif)
-
+    <div> 
+        <img style = 'margin: 10px'  src = './app/src/content/ProtectedRoutes2.gif' alt = 'logout callback' width = 40% />
+    </div>
 ### auth.js
  - auth obj defined to simuulate login/authentication
  - lower-case used because we are expecting an instance of auth obj
