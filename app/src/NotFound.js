@@ -3,7 +3,7 @@ import {Button, Container, Icon} from 'semantic-ui-react';
 
 export const NotFound = (props) => {
     return (
-        <Container style = {{ border: `1px solid olive`, margin: `20px`, padding: `10px`}}>
+        <Container style = {{ border: `1px solid olive`, margin: `20px`, padding: `10px`, backgroundColor: 'grey'}}>
            <p> {props.notFoundProp} </p>  
         
             <Button style = {{ border: '1px solid black', margin: `5px` }}
@@ -22,6 +22,9 @@ export const NotFound = (props) => {
                 
             </Button>
 
+            <div className="ui  active" style = {{margin: `20px`}}>
+                <div className="ui active centered inverted inline text loader"> loader text </div>
+            </div>
 
         </Container>
     )
