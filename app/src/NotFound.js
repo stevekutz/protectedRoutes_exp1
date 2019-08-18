@@ -1,12 +1,17 @@
 import React from 'react';
+import {Button, Container} from 'semantic-ui-react';
 
-export const NotFound = () => {
+export const NotFound = (props) => {
     return (
-        <div>
+        <Container style = {{margin: `20px`, padding: `10px`, border: `1px solid olive`}}>
            <p> 404 not found </p>  
-        </div>
+        
+            <Button 
+                inverted color = 'olive'
+                onClick = { () => props.history.push('/') }        
+            >Back to Landing page</Button>
 
-
+        </Container>
     )
 }
 
