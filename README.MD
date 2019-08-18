@@ -4,7 +4,7 @@ An authenticated login is simulated to render a protected route from a landing p
         <img style = 'margin: 10px'  src = './app/src/content/ProtectedRoutes3.gif' alt = 'logout callback' width = 40% />
     </div>
 ### auth.js
- - auth obj defined to simuulate login/authentication
+ - auth obj defined to simulate login/authentication
  - lower-case used because we are expecting an instance of auth obj
     - auth.login called with a callback when login successful and will redirect user to the protected route  
     <div>
