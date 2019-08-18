@@ -2,6 +2,7 @@ import React from 'react';
 import { css } from '@emotion/core';
 import { ClimbingBoxLoader } from 'react-spinners';
 import {Button, Container} from 'semantic-ui-react';
+import auth from './auth';
 
 const override = css`
     display: flex;
@@ -24,6 +25,10 @@ export const ProtectedPage = (props) => {
             border = '1px solid black'
           />
 
+          <Button 
+            inverted color = 'red'
+            onClick = { () => { auth.logout( () =>  props.history.push('/') )}        
+            }  > Logout  </Button>
         </Container>
     )
 
