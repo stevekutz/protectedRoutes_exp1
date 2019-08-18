@@ -28,7 +28,8 @@ export const ProtectedPage = (props) => {
           <Button 
             inverted color = 'red'
             onClick = { () => { auth.logout( () =>  props.history.push('/') )}        
-            }  > Logout  </Button>
+            }  > Logout  
+         </Button>
         </Container>
     )
 

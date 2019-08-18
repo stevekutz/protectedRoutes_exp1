@@ -6,6 +6,7 @@ import {Button, Container} from 'semantic-ui-react';
 import {LandingPage} from './LandingPage';
 import {ProtectedPage} from './ProtectedPage';
 import {ProtectedRoute} from './ProtectedRoute';
+import {NotFound} from './NotFound';
 
 import { css } from '@emotion/core';
 import { RingLoader } from 'react-spinners';
@@ -31,16 +32,22 @@ function App() {
       border = '1px solid black'
     />
 
+      <Switch>
+        <Route 
+          exact path = '/'
+          render = { (props) => <LandingPage {...props} routeProp = {"render prop passed into LandingPage"} />   } 
+        />
+        <ProtectedRoute 
+          exact path = '/protected'
+          routeProp = {"render prop passed into ProtectedPage"}
+          component = {ProtectedPage}
+        />
 
-    <Route 
-    exact path = '/'
-    render = { (props) => <LandingPage {...props} routeProp = {"render prop passed into LandingPage"} />   } 
-    />
-    <ProtectedRoute 
-    exact path = '/protected'
-    routeProp = {"render prop passed into ProtectedPage"}
-    component = {ProtectedPage}
-    />
+        <Route 
+          path = '*' 
+          render = { (props) => <NotFound  {...props} />}
+        />
+      </Switch>
 
     </Container>
   );
