@@ -33,5 +33,4 @@ An authenticated login is simulated to render a protected route from a landing p
 4) Add `semantic UI  React` dependencies and configure `index.html`
     - `yarn add semantic-ui-react`
     - add to `index.html`  
-        `<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" />`
-5)         
+        `<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" />`       

@@ -1,5 +1,4 @@
 import React from 'react';
-// import logo from './logo.svg';
 import {Route, Switch} from 'react-router-dom';
 import {Container} from 'semantic-ui-react';
 
@@ -54,6 +53,9 @@ function App() {
   );
 }
 
+export default App;
+
+
 /*  After ProtectedRoute created, we can replace the original Route 
     <ProtectedRoute 
     exact path = '/protected'
@@ -101,4 +103,4 @@ or you might have mixed up default and named imports.
       />
 */
 
-export default App;
+

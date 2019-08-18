@@ -30,12 +30,3 @@ export const NotFound = (props) => {
         </Container>
     )
 }
-
-/*
-          <Button 
-            inverted color = 'red'
-            onClick = { () => { auth.logout( () =>  props.history.push('/') )}        
-            }  > Logout  
-         </Button>
-
-*/
