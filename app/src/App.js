@@ -5,6 +5,7 @@ import {Button, Container} from 'semantic-ui-react';
 
 import {LandingPage} from './LandingPage';
 import {ProtectedPage} from './ProtectedPage';
+import {ProtectedRoute} from './ProtectedRoute';
 
 import { css } from '@emotion/core';
 import { RingLoader } from 'react-spinners';
@@ -35,23 +36,48 @@ function App() {
     exact path = '/'
     render = { (props) => <LandingPage {...props} routeProp = {"render prop passed into LandingPage"} />   } 
     />
-    <Route 
+    <ProtectedRoute 
     exact path = '/protected'
-    render = { (props) => <ProtectedPage {...props } routeProp = {"render prop passed into ProtectedPage"} />   } 
+    routeProp = {"render prop passed into ProtectedPage"}
+    component = {ProtectedPage}
     />
 
     </Container>
   );
 }
 
-/*
+/*  After ProtectedRoute created, we can replace the original Route 
+    <ProtectedRoute 
+    exact path = '/protected'
+    component = {ProtectedPage}
+    />
+*/
+
+
+/* This breaks
+    <Route 
+    exact path = '/protected'
+    render = { (props) => <ProtectedPage {...props } routeProp = {"render prop passed into ProtectedPage"} />   } 
+    />
+Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) 
+but got: undefined. You likely forgot to export your component from the file it's defined in, 
+or you might have mixed up default and named imports.
+
+
+*/
+
+
+
+
+
+/*     old way
 
       <Route 
         exact path = '/'
         component = {LandingPage} 
       />
       <Route 
-      exact path = '/protectedApp'
+      exact path = '/protected'
       component = {ProtectedPage}
       />
 
