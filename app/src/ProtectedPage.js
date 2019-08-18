@@ -31,13 +31,13 @@ export const ProtectedPage = (props) => {
             inverted color = 'red'
             onClick = { () => { auth.logout( () =>  props.history.push('/') )}        
             }  > Logout  
-         </Button>
+          </Button>
 
-         <Button 
-         inverted color = 'purple'
-         onClick = { ()  =>  props.history.push('/badRoute') }        
-           > Goto Bad Route 
-      </Button>
+          <Button 
+            inverted color = 'purple'
+            onClick = { ()  =>  props.history.push('/badRoute') }        
+              > Goto Bad Route 
+          </Button>
         </Container>
     )
 
