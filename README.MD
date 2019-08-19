@@ -10,7 +10,8 @@ An authenticated login is simulated to render a protected route from a landing p
     <div>
         <img style = 'margin: 10px'  src = './app/src/content/login_callback.png' alt = 'login callback' height= 60% />
     </div>
-    - auth.logout called with a callback to change status of authenticated to false and redirect back to landing page
+
+    - auth.logout called with a callback to change status of  authenticated to false and redirect back to landing page
     <div>
         <img style = 'margin: 10px'  src = './app/src/content/logout_callback.png' alt = 'logout callback' height = 60% />
     </div>    
@@ -20,13 +21,17 @@ An authenticated login is simulated to render a protected route from a landing p
  -  within route, ...rest is restructured
  -  authentication status is verified
  -  render prop used to return either:
-#### ProtectedPage component
+
+    #### ProtectedPage component
+    
     <div>
         <img style = 'margin: 10px'  src = './app/src/content/ProtectedRoute_code.png' alt = 'ProtectedRoute_code' height = 40% />
     </div>
-#### Redirect component from Router
+
+    #### Redirect component from Router
+
     <div>
-        <img style = 'margin: 10px'  src = './app/src/content/ProtectedRoute_log.png' alt = 'ProtectedRoute_logged out' width = 50% />
+        <img style = 'margin: 10px'  src = './app/src/content/ProtectedRoute_log.png' alt = 'ProtectedRoute_log' width = '60%'/>
     </div>
 
 
